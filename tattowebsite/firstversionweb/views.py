@@ -13,9 +13,7 @@ from django.contrib import messages
 # Create your views here.
 def homePage(request):
     context = {}
-
-
-    return render(request, "firstversionweb/homepage.html", context)
+    return render(request, "firstversionweb/main.html", context)
 
 
 def aboutUs(request):
