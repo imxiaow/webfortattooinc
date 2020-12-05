@@ -13,8 +13,8 @@ from django.contrib import messages
 # Create your views here.
 def homePage(request):
     context = {}
-    return render(request, "firstversionweb/main.html", context)
-
+    return render(request, "firstversionweb/homepage.html", context)
+    #return HttpResponse('home')
 
 def aboutUs(request):
     context = {}
@@ -22,3 +22,13 @@ def aboutUs(request):
 
     return render(request, "firstversionweb/aboutus.html", context)
 
+
+def contactUs(request):
+    context = {}
+
+    return render(request, "firstversionweb/contactus.html", context)
+
+def tattoDesign(request):
+    context = {}
+
+    return render(request, "firstversionweb/tattodesign.html", context)
