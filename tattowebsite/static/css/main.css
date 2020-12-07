@@ -2,7 +2,19 @@
 }
 body{
 	background-color: #ebeff5;
+	font-family: "Microsoft Yahei", sans-serif;
+    font-weight: lighter;
 }
+
+header {
+	background-image: url("{% static 'image/thumbnail_logo&heading.png' %}");
+    color: white;
+    width: 1600px;
+    height: 990px;
+    text-align: center;
+    margin: 0 auto;
+}
+ 
 
 .image-container{
 	text-align: center;
@@ -17,4 +29,37 @@ body{
 
 .navbar-toggler{
 	background-color: #7eb444;
+}
+
+
+footer {
+    width: 1600px;
+    height: 400px;
+    background-color: black;
+    margin: 0 auto;
+    color: rgb(90, 90, 90);
+    font-size: 18px;
+}
+ 
+footer>div {
+    width: 1200px;
+    height: 310px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+ 
+footer div div {
+    width: 150px;
+    height: 200px;
+}
+ 
+footer div div:last-child {
+    width: 270px;
+    height: 200px;
+}
+ 
+footer div div p:first-child {
+    color: #ffffff;
 }
