@@ -1,3 +1,3 @@
 # webfortattooinc
 
-Web Dev for Tattoo busniess in Toronto. 
+Full stack Web Dev for Tattoo busniess in Toronto. 
