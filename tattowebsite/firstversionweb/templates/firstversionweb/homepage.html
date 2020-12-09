@@ -50,9 +50,27 @@ input[type=text], select, textarea {
       padding-top: 20px;
       padding-bottom:20px;
   }
+  .header-container {
+    text-align: center;
+    background-color: white;
+    margin: 15%;
+  }
+  .header-container img{
+    width: 70%;
+    height: 70%;
+  } 
+  
 </style>
 
+
+
+
+<div class="header-container">
+    <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_logo&heading.png' %}"></a></div>
+</div>
+
 <hr>
+
 
 <div class="about-container">
     <div class="row">
@@ -66,8 +84,6 @@ input[type=text], select, textarea {
         </div>
     </div>    
 </div>
-
-
 
 
 <div class="row">
@@ -94,8 +110,6 @@ input[type=text], select, textarea {
         </div>
     </div>
 </div>
-
-
 
 
 <div class="container">
@@ -152,7 +166,6 @@ input[type=text], select, textarea {
         </div>
     </div>
 </div>
-
 
 
 <div class="container">
