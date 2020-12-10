@@ -50,7 +50,7 @@ footer {
     height: auto;
     background-color: black;
     margin: 0 auto;
-    color: rgba(235, 235, 235, 0.945);
+    color: rgba(235, 235, 235, 0.904);
     font-size: 18px;
 }
  
@@ -75,14 +75,20 @@ footer div div:last-child {
 }
  
 footer div div p:first-child {
-    color: #ffffff;
+    color: rgba(235, 235, 235, 0.904);
 }
 
 .footer-copyright{
   font-size: 13px;
   text-align: center;
+}
+
+.wechatQR {
+  width: 18%;
+  color: rgba(235, 235, 235, 0.904);
 
 }
+
 </style>
 
 <footer>
@@ -91,18 +97,26 @@ footer div div p:first-child {
       <p class="text-center">CONTACT</p>
       <p class="text-center"><i class="fa fa-fw fa-phone-square" style="font-size:33px"></i>+1-289-981-8528</p>
       <p class="text-center"><i class="fa fa-fw fa-envelope-square" style="font-size:33px"></i>info@wildcranetattoos.com</p>
+      
       <p class="text-center">315 Steelcase Rd E Unit 8, Markham, ON L3R 2R5</p>
     </div>
     <div>
-      <p></p>
       <p class="text-center" id="icon">
-        <a href="https://www.instagram.com/wild_crane_tattoos_official/" target="_blank"><i class="fa fa-fw fa-instagram" style="font-size:40px;color:white"></i></a> &nbsp;
-        <a href="https://www.linkedin.com/company/wild-crane-tattoos-inc/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:40px;color:white"></i></a> &nbsp;
+        <a href="https://www.instagram.com/wild_crane_tattoos_official/" target="_blank"><i class="fa fa-fw fa-instagram" style="font-size:40px;color: rgba(235, 235, 235, 0.904);"></i></a> &nbsp;
+        <a href="https://www.linkedin.com/company/wild-crane-tattoos-inc/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:40px;color: rgba(235, 235, 235, 0.904);"></i></a> &nbsp;
       </p>
+      <p class="text-center"><i class="fa fa-weixin" style="font-size:22px"></i> wildcranetattoos</p>
+      <p class="text-center" id="icon">
+        <img class="wechatQR" src="{% static 'image/wechat_Q.JPG' %}">
+      </p>
+
+     
+      
+
     </div>
   </div>
-<hr>
 
+<hr>
 <footer class="footer-copyright">&copy; COPYRIGHT  &nbsp;&nbsp;WILD  &nbsp;&nbsp;CRANE  &nbsp;&nbsp;TATTOO  &nbsp;&nbsp;2020  &nbsp;&nbsp;|  &nbsp;&nbsp;ALL  &nbsp;&nbsp;RIGHTS  &nbsp;&nbsp;RESERVED</footer>
 
 </footer>
