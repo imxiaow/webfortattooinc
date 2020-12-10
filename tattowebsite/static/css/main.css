@@ -4,6 +4,7 @@ body{
 	background-color:white;
 	font-family: "Microsoft Yahei", sans-serif;
 	font-weight: lighter;
+	overflow-x: hidden; 
 
 }
 
