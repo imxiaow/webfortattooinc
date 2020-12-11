@@ -45,8 +45,6 @@ def homePage(request):
         company_send_out_email.fail_silently=False
         company_send_out_email.send()
         return redirect('home')
-        return render(request, "firstversionweb/homepage.html", {})
-
     else:
         context = {}
         return render(request, "firstversionweb/homepage.html", context)
