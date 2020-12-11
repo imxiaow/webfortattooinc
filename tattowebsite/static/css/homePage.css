@@ -4,6 +4,8 @@
     height: auto;
     text-align: center;
     margin:0;
+    padding-top: 4%;
+    padding-bottom:2%;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -37,7 +39,7 @@ input[type=text], select, textarea {
 
 
   .row {
-      padding-top:5%;
+      padding-top:2%;
       padding-bottom:3%;
   }
 
@@ -106,7 +108,9 @@ input[type=text], select, textarea {
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: left;
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
