@@ -164,17 +164,21 @@
                 <h6 class="text-center">
                     Do you have any questions? <br> Swing by for a cup of coffee, or leave us a message:
                 </h6>
-                <form action="action_page.php">
-            
+
+
+
+                <form action="{% url 'home' %}" method="POST">
+                    {% csrf_token %}
+
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
             
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
             
-                <label for="country">Artists</label>
-                <select id="country" name="country">
-                    <option value="canada">Undecided</option>
+                <label for="Artists">Artists</label>
+                <select id="Artists" name="Artists">
+                    <option value="Undecided">Undecided</option>
                     <option value="Ciel">Ciel Q</option>
                     <option value="Echo">Echo Q</option>
                 </select>
@@ -183,11 +187,13 @@
                 <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
             
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:200px"></textarea>
             
-                <input type="submit" value="Submit">
+                <input type="submit" value="Send Message">
             
                 </form>
+
+
             </div>
         </div>
     </div>

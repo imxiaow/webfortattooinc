@@ -4,16 +4,52 @@ from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 
+from django.core.mail import send_mail
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+
 from django.contrib.auth import authenticate, login, logout
 
 from django.contrib import messages
 
-
-
 # Create your views here.
 def homePage(request):
-    context = {}
-    return render(request, "firstversionweb/homepage.html", context)
+    if request.method == 'POST':
+        # get the form information
+        firstname = request.POST.get('firstname') # grab the data
+        lastname = request.POST.get('lastname')
+        Artists = request.POST.get('Artists')
+        emailaddress = request.POST.get('emailaddress')
+        subjectmessage = request.POST.get('subjectmessage')
+
+        info_context = {'firstname':firstname, 'lastname':lastname, 'Artists':Artists, 'emailaddress':emailaddress, 'subjectmessage':subjectmessage}
+
+        # send the form as email to company
+        send_mail(
+            'Contact Form Submission from ' + firstname + ' ' + lastname, #subject
+            'The Contact Form Submission is the following: \n' + "Customer Name: " + firstname + ' ' + lastname + "\n" + "Artists: " + Artists + "\n" + "Customer Email Address: " + emailaddress + "\n" + "Message: \n" + subjectmessage + "\n", # message
+            emailaddress, # senders email address
+            ['info@wildcranetattoos.com'],#List of To EMail Address
+            fail_silently=False
+            )
+        
+        # automatically send an email to the form sender to confirm their submission.
+        auto_send_mail_template = render_to_string("firstversionweb/automatic_email_companyToCustomer_temp.html", {'firstname':firstname})
+        company_send_out_email = EmailMessage(
+            'auto-reply: Contact Form Submission - ' + firstname, 
+            auto_send_mail_template, 
+            settings.EMAIL_HOST_USER,
+            [emailaddress]
+            )
+        company_send_out_email.fail_silently=False
+        company_send_out_email.send()
+
+        return render(request, "firstversionweb/homepage.html", {})
+
+    else:
+        context = {}
+        return render(request, "firstversionweb/homepage.html", context)
     #return HttpResponse('home')
 
 
