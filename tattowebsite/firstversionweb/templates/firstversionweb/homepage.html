@@ -4,6 +4,8 @@
 
 <link rel="stylesheet" type="text/css" href="{% static '/css/homePage.css' %}">
 
+
+
 <div id="videoBg">
     <video loop muted autoplay>
         <source src="{% static 'image/Wild_Crane_Andy.mp4' %}" type="video/mp4">
@@ -165,31 +167,33 @@
                     Do you have any questions? <br> Swing by for a cup of coffee, or leave us a message:
                 </h6>
 
-
-
                 <form action="{% url 'home' %}" method="POST">
                     {% csrf_token %}
 
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-            
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            
-                <label for="Artists">Artists</label>
-                <select id="Artists" name="Artists">
-                    <option value="Undecided">Undecided</option>
-                    <option value="Ciel">Ciel Q</option>
-                    <option value="Echo">Echo Q</option>
-                </select>
-            
-                <label for="email">Email</label>
-                <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
-            
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:200px"></textarea>
-            
-                <input type="submit" value="Send Message">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="Artists">Artists</label>
+                    <select id="Artists" name="Artists">
+                        <option value="Undecided">Undecided</option>
+                        <option value="Ciel">Ciel Q</option>
+                        <option value="Echo">Echo Q</option>
+                    </select>
+                
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:200px"></textarea>
+                
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    <div class="g-recaptcha" data-sitekey="6Lc74QMaAAAAABDtCfFirzISMMfDVfOXyhNnmV9S"></div>
+
+
+                    <input type="submit" value="Send Message">
             
                 </form>
 
