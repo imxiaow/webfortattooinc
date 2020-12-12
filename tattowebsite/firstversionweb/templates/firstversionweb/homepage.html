@@ -191,7 +191,14 @@
                 
                     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                     <div class="g-recaptcha" data-sitekey="6Lc74QMaAAAAABDtCfFirzISMMfDVfOXyhNnmV9S"></div>
-
+                    
+                    {% if messages %}
+                    <ul class="messages">
+                      {% for message in messages %}
+                        <li class="{{ message.tags }}"> {{ message }} </li>
+                      {% endfor %}
+                    </ul>
+                    {% endif %}
 
                     <input type="submit" value="Send Message">
             
