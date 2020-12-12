@@ -16,6 +16,8 @@ from django.contrib import messages
 import urllib
 import json
 
+from django.urls import reverse
+
 
 # Create your views here.
 def homePage(request):
@@ -66,11 +68,10 @@ def homePage(request):
             company_send_out_email.fail_silently=False
             company_send_out_email.send()
 
-
         else:
-            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+            messages.error(request, 'Error: Invalid reCAPTCHA. Please try again.')
 
-        return redirect('home')
+        return redirect(reverse('home')+ "#contactform")
 
     else:
         context = {}
