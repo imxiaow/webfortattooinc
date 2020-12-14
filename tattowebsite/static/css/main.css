@@ -1,23 +1,11 @@
 html {
 	scroll-behavior: smooth;
+	font-family: 'Raleway';  
   }
 
-  
 body{
 	background-color:white;
-	font-family: "Microsoft Yahei", sans-serif;
-	font-weight: lighter;
-	overflow-x: hidden; 
-
-}
-
-header {
-	background-image: url("{% static 'image/thumbnail_logo&heading.png' %}");
-    color: white;
-    width: 1600px;
-    height: 990px;
-    text-align: center;
-    margin: 0 auto;
+	font-family: 'Raleway';  
 }
 
 .image-container{
@@ -34,3 +22,5 @@ header {
 .navbar-toggler{
 	background-color: #7eb444;
 }
+
+

@@ -1,7 +1,3 @@
-html {
-	scroll-behavior: smooth;
-}
-
 .about-container{
     background-color: #ffffff;
     width: 100%;
@@ -10,6 +6,10 @@ html {
     margin:0;
     padding-top: 4%;
     padding-bottom:2%;
+}
+
+h3, p, h6, h5{
+    font-family: 'Raleway';   
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -40,7 +40,6 @@ input[type=text], select, textarea {
   }
   
   /* Add a background color and some padding around the form */
-
 
   .row {
       padding-top:2%;
