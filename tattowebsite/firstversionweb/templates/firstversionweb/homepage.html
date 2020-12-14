@@ -3,8 +3,7 @@
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static '/css/homePage.css' %}">
-<link htype="text/css" ref="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
 
 <div id="videoBg">
     <video loop muted autoplay>
@@ -26,11 +25,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">
-                    <a href="#aboutsection">About</a> 
+                <h3 class="text-center" id="headersec">
+                    About
                 </h3>
-                <p class="text-center">
-                    Welcome to Wild Crane Tattoo!<br>Please make an appointment before you come visit. <br> No walk-in service during COVID-19. <br> Sorry for your inconvenience. 
+                <p class="text-center" id="aboutsectiontext">
+                    Welcome to Wild Crane Tattoo!<br> 
+                    Please make an appointment before you come visit. <br> 
+                    No walk-in service during COVID-19. <br> 
+                    Sorry for your inconvenience. 
                 </p>
             </div>
         </div>    
@@ -41,8 +43,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">
-                    <a href="#gallerysection">Gallery</a>
+                <h3 class="text-center" id="headersec">
+                    Gallery
                 </h3>
 
                 <div class="row">
@@ -72,39 +74,41 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">
-                    <a href="#artistsection">Artists</a>
+                <h3 class="text-center" id="headersec">
+                    Artists
                 </h3>
-
                 <div class="row">
                     <div class="col-md-6">
-                        <h5 class="text-center">Ciel Quan</h5>
+                        <h5 class="text-center" id="artistnamesec">Ciel Quan</h5>
                         <p></p>
-                        <p class="text-center">
+                        <hr>
+                        <img class="artist-imge" src="{% static 'image/ciel.JPG' %}">
+                        <hr>
+                        <p></p>
+                        <p class="text-center" id="artistintrotext">
                             Honours Bachelor of Illustration, Sheridan College, Canada <br>
-                            Specializing in Realistic and Illustrative tattoo. <br> 
                         </p> 
                         <p></p>
-                        <img class="artist-imge" src="{% static 'image/ciel.JPG' %}">
+                        <p></p>
+                        <p class="text-center" id="artistintrotext">
+                            Specializing in Realistic and Illustrative tattoo.
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-center" id="artistnamesec">Echo Quan</h5>
                         <p></p>
                         <hr>
-                        <p></p>
-                        <p class="text-center">Language: Mandarin and English. <br></p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <h5 class="text-center">Echo Quan</h5>
-                        <p></p>
-                        <p class="text-center">
+                        <img class="artist-imge" src="{% static 'image/echo.JPG' %}">
+                        <hr>
+                        <p class="text-center" id="artistintrotext">
                             Honours Bachelor of Animation, Sheridan College, Canada <br>
-                            Specializing in Ink Painting and  Anime tattoo. <br>
                         </p>
                         <p></p>
-                        <img class="artist-imge" src="{% static 'image/echo.JPG' %}">
                         <p></p>
+                        <p></p>
+                        <p class="text-center" id="artistintrotext">Specializing in Ink Painting and  Anime tattoo. </p>
                         <hr>
-                        <p></p>
-                        <p class="text-center">Language: Mandarin and English. </p>
                     </div>
                 </div>
             </div>
@@ -115,13 +119,13 @@
 <div class="about-container" id="tattoodesignsection">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="text-center">
-                <a href="#tattoodesignsection">Tattoo Design</a>
+            <h3 class="text-center" id="headersec">
+                Tattoo Design
             </h3>
             
             <div class="row">
                 <div class="col-md-3">
-                    <h6 class="text-center">Realism</h6>
+                    <h6 class="text-center" id="artistnamesec">Realism</h6>
                     <hr>
     
                     <img class="design-imge" src="{% static 'image/design-realistic.jpg' %}">
@@ -129,21 +133,21 @@
                 </div>
     
                 <div class="col-md-3">
-                    <h6 class="text-center">Ink Painting</h6>
+                    <h6 class="text-center" id="artistnamesec">Ink Painting</h6>
                     <hr>
                     <img class="design-imge" src="{% static 'image/gallery-style-example-1.jpg' %}">
              
                 </div>
     
                 <div class="col-md-3">
-                    <h6 class="text-center">Illustrative</h6>
+                    <h6 class="text-center" id="artistnamesec">Illustrative</h6>
                     <hr>
                     <img class="design-imge" src="{% static 'image/design-illustration.jpg' %}">
                   
                 </div>
     
                 <div class="col-md-3">
-                    <h6 class="text-center">Anime</h6>
+                    <h6 class="text-center" id="artistnamesec">Anime</h6>
                     <hr>
                     <img class="design-imge" src="{% static 'image/design-amine.jpg' %}">
                 
@@ -153,13 +157,12 @@
     </div>  
 </div>
 
-
 <div class="about-container" id="contactform">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center"><a href="#contactform">Contact Us</a></h3>
-                <h6 class="text-center">
+                <h3 class="text-center" id="headersec">Contact Us</h3>
+                <h6 class="text-center" id="artistintrotext">
                     Do you have any questions? <br> Swing by for a cup of coffee, or leave us a message:
                 </h6>
 
