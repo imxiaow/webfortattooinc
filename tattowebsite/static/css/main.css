@@ -8,6 +8,10 @@ html {
     padding: 0px;
 }
 
+.page-content{
+	flex-grow : 0!important;
+}
+
 body{
 	background-color:white;
 	font-family: 'Andika New Basic', sans-serif;
@@ -16,7 +20,10 @@ body{
     height: 100%;
     margin: 0px;
 	padding: 0px;
-	min-height: 100%
+	min-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
+	
 }
 
 .image-container{
