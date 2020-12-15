@@ -78,6 +78,8 @@ def homePage(request):
         return render(request, "firstversionweb/homepage.html", context)
     #return HttpResponse('home')
 
+    #status=206
+
 
 def aboutUs(request):
     context = {}
