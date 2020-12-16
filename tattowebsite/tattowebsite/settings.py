@@ -39,14 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+
+    'whitenoise.runserver_nostatic',
+    
     'django.contrib.staticfiles',
-
     'firstversionweb',
-
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -54,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+#'tattowebsite.middleware.RangesMiddleware',
 
 ROOT_URLCONF = 'tattowebsite.urls'
 
@@ -130,6 +136,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/image')
 
 # myaccount.google.com/lesssecureapps
 # myaccount.google.com/apppasswords
