@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 from dotenv import load_dotenv
 
 
@@ -30,9 +31,10 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY'] 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.01',
+'http://wildcranetattoowebxw.herokuapp.com/']
 #'192.168.1.41'
 
 # Application definition
@@ -174,3 +176,6 @@ EMAIL_USE_TLS = True
 
 GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
 
+# Activate Django-Heroku
+
+django_heroku.settings(locals())
