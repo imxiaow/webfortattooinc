@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import django_heroku
 from dotenv import load_dotenv
+import psycopg2
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,13 +30,15 @@ if os.path.isfile(dotenv_file):
     load_dotenv(dotenv_file)
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY'] 
+#SECRET_KEY = os.environ['SECRET_KEY'] 
+
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.01',
-'http://wildcranetattoowebxw.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.01','wildcranetattoowebxw.herokuapp.com', '.herokuapp.com']
 #'192.168.1.41'
 
 # Application definition
@@ -45,9 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-
-    'whitenoise.runserver_nostatic',
     
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'firstversionweb',
 ]
@@ -98,7 +101,7 @@ DATABASES = {
     }
 }
 
-
+ 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -138,6 +141,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
@@ -168,14 +172,56 @@ if os.path.isfile(dotenv_file):
     load_dotenv(dotenv_file)
 
 # Update secret key
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD'] #Instead of your actual secret key
+#EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD'] #Instead of your actual secret key
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 ############################
 EMAIL_USE_TLS = True
 #EMAIL_USE_SSL = True
 
 
-GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
-
+#GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
+GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
 # Activate Django-Heroku
 
 django_heroku.settings(locals())
+
+
+ # Debugging in heroku live
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+                       'pathname=%(pathname)s lineno=%(lineno)s ' +
+                       'funcname=%(funcName)s %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        }
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        'testlogger': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        }
+    }
+}
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
+
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
