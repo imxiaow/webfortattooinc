@@ -181,8 +181,21 @@ EMAIL_USE_TLS = True
 
 #GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
 GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
-# Activate Django-Heroku
 
+
+
+# HTTPS setting 
+SESSION_COOKIE_SECURE = True #make sure the cookie is served https 
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True 
+
+# HTST setting
+SECURE_HSTS_SECONDS = 31536000 # 1 year
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+
+# Activate Django-Heroku
 django_heroku.settings(locals())
 
 
