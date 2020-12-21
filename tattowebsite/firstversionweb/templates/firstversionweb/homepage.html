@@ -3,10 +3,10 @@
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/homePage.css' %}">
-<link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
 <div id="videoBg">
-    <video loop muted autoplay poster="{% static 'image/Video_ScreenShot.png'%}" plays-inline >
+    <video loop muted autoplay poster="{% static 'image/Video_ScreenShot.png'%}" playsinline >
         <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
         <source src="{% static 'image/Wild_Crane_Andy.mp4' %}" type="video/mp4" />
     </video>
@@ -23,7 +23,9 @@
     </div>
 </div>
 
-<div class="about-container" id="aboutsection">
+
+<div class="about-container">
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -39,40 +41,36 @@
             </div>
         </div>    
     </div>
-</div>
 
-<div class="about-container" id="gallerysection">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="text-center" id="headersec">
-                    Gallery
-                </h3>
 
-                <div class="row">
-                    <div class="col-md-3">     
-                        <img class="gallery-img"src="{% static 'image/gallery_10.jpg' %}">
-                    </div>
-                
-                    <div class="col-md-3">
-                        <img class="gallery-img" src="{% static 'image/gallery_4.jpg' %}">
-                    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center" id="headersec">
+                Gallery
+            </h3>
 
-                    <div class="col-md-3">
-                        <img class="gallery-img" src="{% static 'image/gallery_3.jpg' %}">
-                    </div>
+            <div class="row">
+                <div class="col-md-3">     
+                    <img class="gallery-img"src="{% static 'image/gallery_10.jpg' %}">
+                </div>
+            
+                <div class="col-md-3">
+                    <img class="gallery-img" src="{% static 'image/gallery_4.jpg' %}">
+                </div>
 
-                    <div class="col-md-3">
+                <div class="col-md-3">
+                    <img class="gallery-img" src="{% static 'image/gallery_3.jpg' %}">
+                </div>
 
-                        <img class="gallery-img" src="{% static 'image/gallery_2.jpg' %}">
-                    </div>
+                <div class="col-md-3">
+
+                    <img class="gallery-img" src="{% static 'image/gallery_2.jpg' %}">
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="about-container" id="artistsection">
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -116,9 +114,7 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="about-container" id="tattoodesignsection">
     <div class="row">
         <div class="col-md-12">
             <h3 class="text-center" id="headersec">
@@ -157,9 +153,7 @@
             </div>
         </div>
     </div>  
-</div>
 
-<div class="about-container" id="contactform">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -203,15 +197,13 @@
                     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                     <div class="g-recaptcha" data-sitekey="6Lc74QMaAAAAABDtCfFirzISMMfDVfOXyhNnmV9S"></div>
                     
-                    
                     <input type="submit" value="Send Message">
-            
                 </form>
-
-
             </div>
         </div>
     </div>
+
 </div>
+
 
 {% endblock %}

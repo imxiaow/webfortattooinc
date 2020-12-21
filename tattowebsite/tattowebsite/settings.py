@@ -34,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #SECRET_KEY = os.environ['SECRET_KEY'] 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+#DEBUG = True
 
 #ALLOWED_HOSTS = []
 
@@ -47,7 +47,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.01','wildcranetattoowebxw.herokuapp.com', '.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.01','wildcranetattoowebxw.herokuapp.com', '.herokuapp.com', 'wildcranetattoos.com']
 #'192.168.1.41'
 
 
@@ -61,7 +61,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'firstversionweb',
@@ -76,7 +75,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 ]
 
 ROOT_URLCONF = 'tattowebsite.urls'
@@ -184,6 +182,15 @@ EMAIL_USE_TLS = True
 
 #GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
 
+#CORS_REPLACE_HTTPS_REFERER = False
+#HOST_SCHEME = "http://"
+#SECURE_PROXY_SSL_HEADER = None
+#SECURE_SSL_REDIRECT = False
+#SESSION_COOKIE_SECURE = False
+#CSRF_COOKIE_SECURE = False
+#SECURE_HSTS_SECONDS = None
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+#SECURE_FRAME_DENY = False
 
 #====================================================================
 #======== Production SETTING =======================================
@@ -191,6 +198,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
+
 
 # HTTPS setting 
 SESSION_COOKIE_SECURE = True #make sure the cookie is served https 

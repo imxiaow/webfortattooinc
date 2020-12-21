@@ -9,7 +9,7 @@
 }
 
 #headersec{
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 900;
     font-size:3em;
     text-transform: capitalize;
@@ -20,7 +20,7 @@
 }
 
 #aboutsectiontext{ 
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size:1.5em;
     text-transform: capitalize;
@@ -29,7 +29,7 @@
 }
 
 #artistnamesec{
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 900;
     font-size:2em;
     text-transform: capitalize;
@@ -41,7 +41,7 @@
 }
 
 #artistintrotext{
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size:1em;
     word-spacing: 0.1em;
