@@ -26,28 +26,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-#dotenv_file = os.path.join(BASE_DIR, ".env")
-#if os.path.isfile(dotenv_file):
-#    load_dotenv(dotenv_file)
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    load_dotenv(dotenv_file)
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = os.environ['SECRET_KEY'] 
+SECRET_KEY = os.environ['SECRET_KEY'] 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 #====================================================================
 #======== Production SETTING ========================================
 #====================================================================
-SECRET_KEY = os.getenv('SECRET_KEY')
+#SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.01','wildcranetattoowebxw.herokuapp.com', '.herokuapp.com', 'wildcranetattoos.com']
+#ALLOWED_HOSTS = ['localhost', '127.0.01','wildcranetattoowebxw.herokuapp.com', '.herokuapp.com', 'wildcranetattoos.com']
 #'192.168.1.41'
 
 
@@ -173,50 +173,50 @@ EMAIL_USE_TLS = True
 #======== DEVELOPMENT SETTING =======================================
 #====================================================================
 # Add .env variables anywhere before SECRET_KEY
-#dotenv_file = os.path.join(BASE_DIR, ".env")
-#if os.path.isfile(dotenv_file):
-#    load_dotenv(dotenv_file)
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    load_dotenv(dotenv_file)
 
 # Update secret key
-#EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD'] #Instead of your actual secret key
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD'] #Instead of your actual secret key
 
-#GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
+GOOGLE_RECAPTCHA_SECRET_KEY = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY'] 
 
-#CORS_REPLACE_HTTPS_REFERER = False
-#HOST_SCHEME = "http://"
-#SECURE_PROXY_SSL_HEADER = None
-#SECURE_SSL_REDIRECT = False
-#SESSION_COOKIE_SECURE = False
-#CSRF_COOKIE_SECURE = False
-#SECURE_HSTS_SECONDS = None
-#SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-#SECURE_FRAME_DENY = False
+CORS_REPLACE_HTTPS_REFERER = False
+HOST_SCHEME = "http://"
+SECURE_PROXY_SSL_HEADER = None
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_HSTS_SECONDS = None
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_FRAME_DENY = False
 
 #====================================================================
 #======== Production SETTING =======================================
 #====================================================================
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+#EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
-GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
+#GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 
 # HTTPS setting 
-SESSION_COOKIE_SECURE = True #make sure the cookie is served https 
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True 
+#SESSION_COOKIE_SECURE = True #make sure the cookie is served https 
+#CSRF_COOKIE_SECURE = True
+#SECURE_SSL_REDIRECT = True 
 
 # HTST setting
-SECURE_HSTS_SECONDS = 31536000 # 1 year
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#SECURE_HSTS_SECONDS = 31536000 # 1 year
+#SECURE_HSTS_PRELOAD = True
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_BROWSER_XSS_FILTER = True
-X_FRAME_OPTIONS = 'DENY'
+#SECURE_CONTENT_TYPE_NOSNIFF = True
+#SECURE_BROWSER_XSS_FILTER = True
+#X_FRAME_OPTIONS = 'DENY'
 
 # Activate Django-Heroku
-django_heroku.settings(locals())
-
+#django_heroku.settings(locals())
+'''
 # Debugging in heroku live
 LOGGING = {
     'version': 1,
@@ -258,7 +258,7 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 
-
+'''
 
 #END 
 #====================================================================
