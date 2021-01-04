@@ -7,5 +7,207 @@
 
 
 
+<section class="home-landsec-heading">
+    <img src="{% static 'image/thumbnail_heading.png' %}" class="comp-head-wds">
+
+</section>
+
+
+
+<section class="home-landsec-video">
+    <div class="home-landsec-video-area">
+        <video loop muted autoplay poster="{% static 'image/Video_ScreenShot.png'%}" playsinline >
+            <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
+            <source src="{% static 'image/Wild_Crane_Andy.mp4' %}" type="video/mp4" />
+        </video>
+    </div>
+</section>
+
+
+
+<section class="home-landsec-text">
+    <div class="home-landsec-textbox">
+        <h1> 
+            Welcome! <br>
+            Please make an appointment <br>
+            before you come visit. <br>
+            No walk-in Service during COVID-19.<br>
+            Sorry for your inconvenience.<br>
+        </h1>
+    </div>
+</section>
+
+
+
+<section class="home-landpage-gallery">
+    <div class="home-landpage-gallery-header">
+        <h1>Craving for wildness</h1>
+    </div>
+
+    <div class="home-landpage-gallery-images">
+
+        <figure class="gallery-item">
+            <img src="{% static 'image/G4.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="{% static 'image/G1.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="{% static 'image/G2.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="{% static 'image/G3.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+    </div>
+
+    <div class="home-landpage-learn-more-button">
+        <h2>Learn more</h2>
+    </div>
+
+</section>
+
+
+<section class="home-landpage-tattoo-design">
+    <div class="home-landpage-tattoo-design-header">
+        <h1>Tattoo design</h1>
+    </div>
+
+    <div class="home-landpage-tattoo-design-images">
+
+        <figure class="design-item">
+            <img src="{% static 'image/TD4.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+        <figure class="design-item">
+            <img src="{% static 'image/TD3.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+        <figure class="design-item">
+            <img src="{% static 'image/TD2.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+        <figure class="design-item">
+            <img src="{% static 'image/TD1.jpg' %}">
+            <figcaption class="port-desc">
+                <p>image title</p>
+                <a href=""  class="button button-accent button-small">image details</a>
+            </figcaption>
+        </figure>
+
+    </div>
+
+    <div class="home-landpage-learn-more-button">
+        <h2>Learn more</h2>
+    </div>
+
+</section>
+
+
+
+<section class="home-landpage-shop">
+    <div class="home-landpage-shop-header">
+        <h1>More ways to be you.</h1>
+    </div>
+
+    <div class="home-landpage-shop-images">
+
+        <figure class="shop-item">
+            <img src="{% static 'image/shop1.jpg' %}">
+        </figure>
+
+        <figure class="shop-item">
+            <img src="{% static 'image/shop2.jpg' %}">
+        </figure>
+
+    </div>
+
+    <div class="home-landpage-shopgift-button">
+        <h2>Shop gift</h2>
+    </div>
+</section>
+
+
+
+<section class="home-landpage-contactus">
+    <div class="home-landpage-contactus-header">
+        <h1>Contact us</h1>
+    </div>
+    
+
+    <div class="home-landpage-contactus-contactform">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}"> 
+                        {{ message }} 
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <form action="{% url 'home' %}" method="POST">
+            {% csrf_token %}
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="Artists">Artists</label>
+            <select id="Artists" name="Artists">
+                <option value="Undecided">Undecided</option>
+                <option value="Ciel">Ciel Q</option>
+                <option value="Echo">Echo Q</option>
+            </select>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:200px"></textarea>
+
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <div class="g-recaptcha" data-sitekey="6Lc74QMaAAAAABDtCfFirzISMMfDVfOXyhNnmV9S"></div>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+    </div>
+
+</section>
+
 
 {% endblock %}
