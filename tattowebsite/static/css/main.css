@@ -68,9 +68,23 @@ nav a:focus {
 
 /* Footer
 =================== */
-footer{
-
+footer {
+    background: #232323;
+    color: #fff;
+    text-align: left;
+    padding: 3em 0;
 }
+
+.footer-copyrights{
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 50;
+    color:#D1D1D1;
+}
+
+
+
+
 
 
 
@@ -80,3 +94,9 @@ footer::after{
     clear: both;
 }
 
+
+
+
+
+/* END
+=================== */
