@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    /*transition: ;*/
+}
+
+.home-landsec-heading{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin:0;
+}
+
+.home-landsec-heading img {
+    width:60%;
+    left:cal(50%*43rem);
+    height:auto;
+}
+
+.home-landsec-video{
+    background: #FAFAFA;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.home-landsec-video-area > video {
+    position:relative;
+    width: 100%;
+    height: auto;
+
+}
+
+.home-landsec-text{
+    background: #FAFAFA;
+    margin-top:0.5em;
+}
+
+.home-landsec-textbox{
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.home-landsec-textbox h1{
+    font-style: italic;
+    font-weight: 1200;
+    font-size: 1.3em;
+    line-height: 2.4rem;
+    letter-spacing: 0.01em;
+    color:#212121;
+}
+
+.home-landsec-textbox span{
+    color:#960000;
+}
+
+/* typography 
+======================= */
+.titile{
+    font-size: ;
+    margin-bottom: ;
+    font-weight: ;
+    margin-top: ;
+
+}
+
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* ===========================
+iphone 12 pro max 428x926
+    default pixel = 10px
+    10px* 43 = 430px
+============================ */
+@media (min-width: 43rem){
+
+
+}
+
+
+
+
+
+

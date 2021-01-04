@@ -1,0 +1,82 @@
+body{
+    margin:0;
+    font-family:'Lato', sans-serif;
+    text-align: center;
+}
+
+
+.container{
+    width: 100%;
+    margin:0 auto;
+}
+
+
+/* header
+=================== */
+header {
+    position: relative;
+    left:cal(50%*43rem);
+    margin: 0.5em ;
+}
+
+header img {
+    width:3rem;
+    height:auto;
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+    top:0;
+    list-style: none;
+}
+
+nav li {
+    display:inline-block;
+    margin:0em;
+}
+
+nav a {
+    font-weight:400;
+    text-decoration: none;
+    /*padding: ;
+    text-transform: ; */
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+    letter-spacing: 0.01em;
+    font-style: normal;
+    background: pink;
+}
+
+nav a:hover,
+nav a:focus {
+    color: ;
+}
+
+@media (min-width:43rem) {
+    .logo {
+        float: center;
+    }
+
+    nav {
+        float: left;
+    }
+}
+
+
+
+/* Footer
+=================== */
+footer{
+
+}
+
+
+
+section:after,
+footer::after{
+    display: block;
+    clear: both;
+}
+
