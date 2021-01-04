@@ -95,6 +95,7 @@
 <section class="home-landpage-contactus">
     <div class="home-landpage-contactus-header">
         <h1>Contact us</h1>
+        <p>Think about having a new tattoo? Book a free consultation!</p> 
     </div>
     
 
@@ -112,10 +113,10 @@
         <form action="{% url 'home' %}" method="POST">
             {% csrf_token %}
 
-            <label for="fname">First Name</label>
+            <label for="fname">First name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your first name..">
 
-            <label for="lname">Last Name</label>
+            <label for="lname">Last name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
             <label for="Artists">Artists</label>
@@ -129,7 +130,7 @@
             <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
 
             <label for="subject">Subject</label>
-            <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:200px"></textarea>
+            <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:4rem"></textarea>
 
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             <div class="g-recaptcha" data-sitekey="6Lc74QMaAAAAABDtCfFirzISMMfDVfOXyhNnmV9S"></div>
