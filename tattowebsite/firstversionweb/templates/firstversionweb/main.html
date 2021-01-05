@@ -44,16 +44,16 @@
 <body>
 
 <header>
-  <img src="{% static 'image/thumbnail_logo.png' %}" class="logo">
+  <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_logo.png' %}" class="logo"></a>
   <nav>
     <ul>
-      <li><a href="">About</a></li>
-      <li><a href="">Artists</a></li>
-      <li><a href="">Gallery</a></li>
-      <li><a href="">Shop</a></li>
-      <li><a href="">Tattoo design</a></li>
-      <li><a href="">Tattoo aftercare</a></li>
-      <li><a href="">Contact us</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'artists' %}">Artists</a></li>
+      <li><a href="{% url 'gallery' %}">Gallery</a></li>
+      <li><a href="{% url 'shop' %}">Shop</a></li>
+      <li><a href="{% url 'tattodesign' %}">Tattoo design</a></li>
+      <li><a href="{% url 'tattooaftercare' %}">Tattoo aftercare</a></li>
+      <li><a href="{% url 'contact' %}">Contact us</a></li>
 
     </ul>
   

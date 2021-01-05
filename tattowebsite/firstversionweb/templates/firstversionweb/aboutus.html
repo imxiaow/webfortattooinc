@@ -1,6 +1,29 @@
 {% extends 'firstversionweb/main.html' %}
 {% load static %}
 {% block content %}
-<h1>About Us</h1>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/AboutPage.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<section class="home-landsec-heading">
+    <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_heading.png' %}" class="comp-head-wds"></a>
+
+</section>
+
+
+<section class="aboutus-company-images-sec">
+	<div class="aboutus-company-images">
+		<img src="{% static 'image/AboutUs.jpg' %}">
+	</div>
+</section>
+
+
+<section class="intro-text-area">
+	<div class="center">
+		<h1>About us</h1>
+		<p>Cranes are a sign of happiness, longevity, prosperity and good fortune in many cultures. In China, the crane is considered to be the "prince" of all birds. The Chinese have made these birds a sign of longevity because, compared to other bird groups, they live for a long time. Some stories suggest that for as long as a thousand years, cranes will live. They also saw these birds as being incredibly graceful. In Japan, because of their permanent pair bonds, cranes were often featured on bridal kimonos. Sweetcakes to be served at Japanese weddings are often baked in the shape of cranes for good luck. </p>
+	</div>
+</section>
+
 
 {% endblock %}

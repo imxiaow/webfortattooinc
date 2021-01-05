@@ -86,17 +86,20 @@ def aboutUs(request):
 
     return render(request, "firstversionweb/aboutus.html", context)
 
+def artistsPage(request):
+    context = {}
+
+    return render(request, "firstversionweb/artists.html", context)
+
 
 def galleryPage(request):
     context = {}
     
     return render(request, "firstversionweb/gallerypage.html", context)
 
-
-def artistsPage(request):
-    context = {}
-
-    return render(request, "firstversionweb/artists.html", context)
+def shoppPage(request):
+    context={}
+    return render(request, "firstversionweb/shopPage.html", context)
 
 
 def tattoDesign(request):
