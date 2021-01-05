@@ -1,6 +1,35 @@
 {% extends 'firstversionweb/main.html' %}
 {% load static %}
 {% block content %}
-<h1>Artists</h1>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/artistsPage.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+<section class="home-landsec-heading">
+    <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_heading.png' %}" class="comp-head-wds"></a>
+
+</section>
+
+
+<section class="ciel-intro-sec">
+	<div class="ciel-photo-area">
+		<img src="{% static 'image/ciel.JPG' %}">
+		<h1>Ciel Quan <hr>Honours Bachelor of Illustration, Sheridan College, Canada<hr> <span id="intro-text">Specializing in Realistic and Illustrative tattoo.</span><hr><a href="https://www.instagram.com/ciel_tattoos/" target="_blank"><span class="fa fa-fw fa-instagram" style="font-size:2rem;color:#232323;"></span></a></h1>
+	</div>
+</section>
+
+
+<section class="echo-intro-sec">
+	<div class="echo-photo-area">
+		<img src="{% static 'image/echo.JPG' %}">
+		<h1>Echo Quan<hr> Honours Bachelor of Animation, Sheridan College, Canada<hr><span id="intro-text">Specializing in Ink Painting and Anime tattoo.</span><hr><a href="https://www.instagram.com/echo.tattoos/" target="_blank"><span class="fa fa-fw fa-instagram" style="font-size:2rem;color:#232323;"></span></a></h1>
+	</div>
+</section>
+
+<p>We are hiring tattoo artists! </p>
+
+
+
 
 {% endblock %}
