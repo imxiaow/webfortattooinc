@@ -1,6 +1,33 @@
 {% extends 'firstversionweb/main.html' %}
 {% load static %}
 {% block content %}
-<h1>Gallery</h1>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/galleryPage.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+
+<section class="home-landsec-heading">
+    <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_heading.png' %}" class="comp-head-wds"></a>
+
+</section>
+
+
+<section class="home-landpage-gallery-sec">
+    <div class="home-landpage-gallery-sec-header">
+        <h1>Follow us on Instagram!</h1>
+    </div>
+</section>
+
+<section class="gallery-ins-plugin-sec">
+
+	<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+	<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+	<ul class="juicer-feed" data-feed-id="wild_crane_tattoos_official"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1></ul>
+
+</section>
+
+
+
 
 {% endblock %}
