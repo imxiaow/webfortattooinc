@@ -72,20 +72,42 @@ footer {
     background: #232323;
     color: #fff;
     text-align: left;
-    padding: 3em 0;
+    padding: 1em 0;
 }
+
+.footer-textarea{
+    
+}
+
+.footer-textarea ul {
+    margin:0;
+    padding:1em;
+    top:0;
+
+}
+
+.footer-textarea li {
+    font-size:1rem;
+    display: block;
+    line-height: 1.4rem;
+    color:rgba(235, 235, 235, 0.904);
+}
+
 
 .footer-copyrights{
     font-size: 0.7rem;
     text-align: center;
     font-weight: 50;
     color:#D1D1D1;
+    padding-top:0em;
 }
 
-
-
-
-
+footer img{
+    width: 25%;
+}
+footer ul{
+    list-style: none;
+}
 
 
 section:after,
