@@ -1,6 +1,17 @@
 {% extends 'firstversionweb/main.html' %}
 {% load static %}
 {% block content %}
-<h1>Tattoo Aftercare</h1>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/tattooaftercarePage.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+
+<section class="home-landsec-heading">
+    <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_heading.png' %}" class="comp-head-wds"></a>
+
+</section>
+
+
 
 {% endblock %}
