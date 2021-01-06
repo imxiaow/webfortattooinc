@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    /*transition: ;*/
+}
+
 /*  ========
  =========== */
 .home-landsec-heading{
@@ -27,9 +32,8 @@
     background: white;
     display: grid;
     grid-template-columns:50% 50%;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     padding:1em;
-    max-width: 85%;
     
 }
 
@@ -68,9 +72,8 @@
     background: white;
     display: grid;
     grid-template-columns:50% 50%;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     padding:1em;
-    max-width: 85%;
 }
 
 .echo-photo-area img {

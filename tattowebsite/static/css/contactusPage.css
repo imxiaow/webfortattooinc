@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    /*transition: ;*/
+}
+
+
 /*  ========
  =========== */
 .home-landsec-heading{

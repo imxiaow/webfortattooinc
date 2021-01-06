@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    /*transition: ;*/
+}
+
 body{
     margin:0;
     font-family:'Lato', sans-serif;
