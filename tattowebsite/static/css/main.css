@@ -23,6 +23,8 @@ nav{
     height: 5rem;
     width:100%;
     background: #34495e;
+    position: fixed;
+    z-index: 99999;
 }
 
 nav a img{
@@ -36,6 +38,8 @@ nav ul{
     margin-right:2rem;
     list-style: none;
 }
+
+
 
 nav li{
     display: inline-block;
@@ -59,10 +63,18 @@ nav ul li a:hover{
 }
 
 nav i{
-    color:white;
+    color:yellow;
     font-size: 2.5rem;
-    display: block;
-    margin:2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media (min-width: 48rem){
+
+}
+
+.sep-sec{
+    height: 5rem;
 }
 
 
