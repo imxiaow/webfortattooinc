@@ -16,3 +16,40 @@
 
 /*  ========
  =========== */
+.tattooaftercare-image-sec{
+    background: white;
+    display: inline-block;
+    max-width: 85%;
+}
+
+.tattooaftercare-image-sec img{
+	width: 100%;
+    height: auto;
+    margin:0;
+
+}
+
+
+.center {
+  margin: 0;
+  width: 100%;
+  padding: 0.1rem;
+}
+
+
+.tattooaftercare-image-sec li{
+	font-size: 0.95rem;
+	text-align: left;
+	letter-spacing: 0.03em;
+	color:#212121;
+	line-height: 1.5rem;
+
+}
+.tattooaftercare-image-sec h1{
+	font-size: 0.95rem;
+	text-align: left;
+	letter-spacing: 0.03em;
+	color:#212121;
+	line-height: 1.5rem;
+
+}
