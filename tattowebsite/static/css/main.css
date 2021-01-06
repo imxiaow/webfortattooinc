@@ -16,59 +16,54 @@ body{
 }
 
 
-/* header
+
+/*nav 
 =================== */
-header {
-    position: relative;
-    left:cal(50%*43rem);
-    margin: 0.5em ;
+nav{
+    height: 5rem;
+    width:100%;
+    background: #34495e;
 }
 
-header img {
-    width:3rem;
-    height:auto;
+nav a img{
+    height: 5rem;
+    padding:0.25rem;
+    border:0.1rem solid yellow;
 }
 
-nav ul {
-    margin:0;
-    padding:0;
-    top:0;
+nav ul{
+    float: right;
+    margin-right:2rem;
     list-style: none;
 }
 
-nav li {
-    display:inline-block;
-    margin:0em;
+nav li{
+    display: inline-block;
+    margin:0 0.5rem;
+    line-height: 2.5rem;
 }
 
-nav a {
-    font-weight:400;
+nav ul li a{
+    color:black;
+    font-size:1rem;
+    border:0.1rem solid red;
     text-decoration: none;
-    /*padding: ;
-    text-transform: ; */
-    text-align: center;
-    color: black;
-    font-size: 1.3rem;
-    letter-spacing: 0.01em;
-    font-style: normal;
-    background: pink;
+    padding: 0.3rem 0.5rem;
+    border-radius:0.2rem;
 }
 
-nav a:hover,
-nav a:focus {
-    color: ;
+nav ul li a:hover{
+    color: #960000;
+    transition: 0.5;
+    border:0.1rem solid red;
 }
 
-@media (min-width:43rem) {
-    .logo {
-        float: center;
-    }
-
-    nav {
-        float: left;
-    }
+nav i{
+    color:white;
+    font-size: 2.5rem;
+    display: block;
+    margin:2rem;
 }
-
 
 
 /* Footer
