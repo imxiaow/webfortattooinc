@@ -6,11 +6,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
 
-
 <section class="home-landsec-heading">
     <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_heading.png' %}" class="comp-head-wds"></a>
 
 </section>
 
 
+<section class="map-to-store">
+	<div id="myMap"></div>
+
+<!-- {lat: 43.821449, lng: -79.341164}; -->
+
+    <!-- Reference to the Bing Maps SDK -->
+    <script type='text/javascript'
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AmpP0JYldcCPrK8Ub2gxrDROv92E8w5aFhAndIEAlebEo0x62eUl8NOTHIMrNLQM' 
+            async defer></script>
+   
+    <script type='text/javascript'>
+	    function GetMap()
+	    {
+	        var map = new Microsoft.Maps.Map('#myMap', {
+	            credentials: 'AmpP0JYldcCPrK8Ub2gxrDROv92E8w5aFhAndIEAlebEo0x62eUl8NOTHIMrNLQM',
+	            center: new Microsoft.Maps.Location(43.821449, -79.341164),
+	            //mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+	            zoom: 12
+	        });
+
+	        var center = map.getCenter();
+
+	        //Create custom Pushpin
+	        var pin = new Microsoft.Maps.Pushpin(center, {
+	            title: 'Wild Crane Tattoos Inc.'
+	        });
+
+	        //Add the pushpin to the map
+	        map.entities.push(pin);
+
+	        //Add your post map load code here.43.821449, -79.341164
+	    }
+
+    </script>
+
+
+</section>
+
+
+
+<section class="home-landpage-contactus" id="contactform">
+    <div class="home-landpage-contactus-header">
+        <h1>Contact us</h1>
+        <p>Think about having a new tattoo? Book a free consultation!</p> 
+    </div>
+    
+
+    <div class="home-landpage-contactus-contactform">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}"> 
+                        {{ message }} 
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="Artists">Artists</label>
+            <select id="Artists" name="Artists">
+                <option value="Undecided">Undecided</option>
+                <option value="Ciel">Ciel Q</option>
+                <option value="Echo">Echo Q</option>
+            </select>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subjectmessage" placeholder="Your message.." style="height:4rem"></textarea>
+
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <div class="g-recaptcha" data-sitekey="6Lc74QMaAAAAABDtCfFirzISMMfDVfOXyhNnmV9S"></div>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+    </div>
+
+</section>
 {% endblock %}

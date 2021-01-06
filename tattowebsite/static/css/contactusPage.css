@@ -16,3 +16,98 @@
 
 /*  ========
  =========== */
+.map-to-store{
+	padding-top:0.5em;	
+	padding-bottom: 0.5em;
+}
+
+
+#myMap {
+    position: relative;
+    width: auto;
+    height: 25rem;
+}
+
+
+
+/*  ========
+ =========== */
+.home-landpage-contactus{
+    padding:0.5em;
+}
+
+.home-landpage-contactus-header h1{
+    text-decoration: underline;
+    /*padding: ;
+    text-transform: ; */
+    text-align: center;
+    color: #212121;
+    font-size: 1.6rem;
+    letter-spacing: 0.01em;
+    font-style: normal;
+    line-height: 1rem;
+}
+.home-landpage-contactus-header p{
+    text-decoration: none;
+    /*padding: ;
+    text-transform: ; */
+    text-align: center;
+    color: #960000;
+    font-size: 0.8rem;
+    letter-spacing: 0.01em;
+    font-style: thin;
+    line-height: 0.3rem;
+}
+
+
+.home-landpage-contactus-contactform{
+    padding:0.8em;
+    background: #EEEEEE;
+}
+
+
+.home-landpage-contactus-contactform li {
+    list-style: none;
+    font-size:0.9rem;
+    text-align: left;
+    color:blue;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 0.5rem; /* Some padding */ 
+    border: 0.1rem solid #ccc;/* Gray border */
+    border-radius: 0.4rem; /* Rounded borders */
+    margin-top: 0.4rem; /* Add a top margin */
+    margin-bottom: 0.4rem; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+form {
+    text-align: left;
+    font-style:bold;
+}
+form label{
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #000000;
+    color: white;
+    padding: 1%;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #000000;
+}
+
+
+
+/*  ========
+ =========== */
