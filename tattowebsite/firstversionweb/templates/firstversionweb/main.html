@@ -45,8 +45,12 @@
 
 
 <nav>
-  
-  <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_logo.png' %}"></a>
+  <i id="menu" class="fa fa-bars" aria-hidden="true"></i>
+  <i id="shopping" class="fa fa-shopping-bag"></i>
+
+  <a href="{% url 'home' %}">
+    <img src="{% static 'image/thumbnail_logo.png' %}">
+  </a>
 
   <ul>
     <li><a href="{% url 'about' %}">About</a></li>
@@ -58,7 +62,7 @@
     <li><a href="{% url 'contact' %}">Contact us</a></li>
   </ul>
 
-  <i class="fa fa-bars" aria-hidden="true"></i>
+  <i id="shopping" class="fa fa-shopping-bag"></i>
 
 </nav>
 
