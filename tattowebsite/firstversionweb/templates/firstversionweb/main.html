@@ -44,27 +44,31 @@
 <body>
 
 
-<nav>
-  <i id="menu" class="fa fa-bars" aria-hidden="true"></i>
-  <i id="shopping" class="fa fa-shopping-bag"></i>
+<header>
+  <h1 class="logo">
+    <a href="{% url 'home' %}"><img src="{% static 'image/thumbnail_logo.png' %}"></a>
+  </h1>
 
-  <a href="{% url 'home' %}">
-    <img src="{% static 'image/thumbnail_logo.png' %}">
-  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-  <ul>
-    <li><a href="{% url 'about' %}">About</a></li>
-    <li><a href="{% url 'artists' %}">Artists</a></li>
-    <li><a href="{% url 'gallery' %}">Gallery</a></li>
-    <li><a href="{% url 'shop' %}">Shop</a></li>
-    <li><a href="{% url 'tattodesign' %}">Tattoo design</a></li>
-    <li><a href="{% url 'tattooaftercare' %}">Tattoo aftercare</a></li>
-    <li><a href="{% url 'contact' %}">Contact us</a></li>
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'artists' %}">Artists</a></li>
+      <li><a href="{% url 'gallery' %}">Gallery</a></li>
+      <li><a href="{% url 'shop' %}">Shop</a></li>
+      <li><a href="{% url 'tattodesign' %}">Tattoo design</a></li>
+      <li><a href="{% url 'tattooaftercare' %}">Tattoo aftercare</a></li>
+      <li><a href="{% url 'contact' %}">Contact us</a></li>
+    </ul>
+  </nav>
 
-  <i id="shopping" class="fa fa-shopping-bag"></i>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
 
-</nav>
+</header>
+
 
 <div class="sep-sec"></div>
 	{% block content %}
