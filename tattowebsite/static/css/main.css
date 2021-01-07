@@ -85,7 +85,7 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-  padding-bottom: 2em;
+  padding-bottom: 5em;
 }
 
 .logo img{
