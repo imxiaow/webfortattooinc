@@ -18,7 +18,16 @@
     height:auto;
 }
 
+@media (min-width: 43rem){
 
+    .home-landsec-heading{
+        margin-top:15%;
+        margin-bottom:15%;
+        margin-left:15%;
+        margin-right:15%;
+   }
+   
+}
 
 /*  ========
  =========== */
@@ -34,6 +43,14 @@
     height: 25rem;
 }
 
+
+@media (min-width: 43rem){
+    .map-to-store{
+        margin-left:30%;
+        margin-right:30%;
+        
+    }
+}
 
 /*  ========
  =========== */
@@ -154,6 +171,14 @@ input[type=submit]:hover {
     background-color: #000000;
 }
 
+
+@media (min-width: 43rem){
+    .home-landpage-contactus{
+        margin-left:30%;
+        margin-right:30%;
+        margin-bottom:3%;
+    }
+}
 
 
 /*  ========

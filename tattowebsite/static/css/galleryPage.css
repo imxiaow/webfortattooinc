@@ -19,6 +19,16 @@
 }
 
 
+@media (min-width: 43rem){
+
+    .home-landsec-heading{
+        margin-top:15%;
+        margin-bottom:15%;
+        margin-left:15%;
+        margin-right:15%;
+   }
+   
+}
 
 /*  ========
  =========== */
@@ -58,7 +68,15 @@
 }
 
 
+@media (min-width: 43rem){
+    .gallery-ins-plugin-sec{
+        margin-top:15%;
+        margin-bottom:15%;
+        margin-left:15%;
+        margin-right:15%;
 
+    }
+}
 
 
 /*  ========

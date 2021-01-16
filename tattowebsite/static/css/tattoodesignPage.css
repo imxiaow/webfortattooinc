@@ -19,7 +19,6 @@
 }
 
 
-
 /*  ========
  =========== */
 
@@ -34,6 +33,23 @@
 }
 
 
+@media (min-width: 43rem){
+
+    .home-landsec-heading{
+        margin-top:15%;
+        margin-bottom:15%;
+        margin-left:15%;
+        margin-right:15%;
+   }
+   .tattoodesign-ins-plugin-sec{
+
+        margin-bottom:3%;
+        margin-left:15%;
+        margin-right:15%;
+   }
+   
+   
+}
 
 
 

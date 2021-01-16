@@ -17,7 +17,16 @@
     height:auto;
 }
 
+@media (min-width: 43rem){
 
+    .home-landsec-heading{
+        margin-top:15%;
+        margin-bottom:15%;
+        margin-left:15%;
+        margin-right:15%;
+   }
+   
+}
 
 /*  ========
  =========== */
@@ -57,4 +66,18 @@
 	color:#212121;
 	line-height: 1.5rem;
 
+}
+
+@media (min-width: 43rem){
+    .tattooaftercare-image-sec{
+
+        margin-bottom:3%;
+        margin-left:30%;
+        margin-right:30%;
+    }
+    
+    .tattooaftercare-image-sec img{
+        width:50%;
+        margin-bottom:3%;
+    }
 }

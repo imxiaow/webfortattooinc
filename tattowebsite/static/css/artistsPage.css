@@ -16,7 +16,16 @@
     left:cal(50%*43rem);
     height:auto;
 }
+@media (min-width: 43rem){
 
+    .home-landsec-heading{
+        margin-top:15%;
+        margin-bottom:15%;
+        margin-left:15%;
+        margin-right:15%;
+   }
+   
+}
 
 
 /*  ========
@@ -90,7 +99,28 @@
 	line-height: 1.5rem;
 }
 
+@media (min-width: 43rem){
+    .ciel-intro-sec{
+        margin-left: 30%;
+        margin-right:30%;
+    }
 
+    .echo-intro-sec{
+        margin-left: 30%;
+        margin-right:30%;
+
+    }
+    .hiring{
+        margin-left:30%;
+        margin-right:30%;
+        margin-top:3%;
+        font-size:1.8rem;
+        margin-bottom:3%;
+        background-color:black;
+        color:white;
+        padding:5%;
+    }
+}
 
  /*  ========
  =========== */
