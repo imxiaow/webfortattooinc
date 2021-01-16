@@ -217,9 +217,6 @@ footer {
     padding: 1em 0;
 }
 
-.footer-textarea{
-    
-}
 
 .footer-textarea ul {
     margin:0;
@@ -258,7 +255,23 @@ footer::after{
     clear: both;
 }
 
+@media(min-width: 43rem){
+  footer img{
+    width:10%;
+  }
+  .footer-textarea{
+    margin-left: 30%;
+    margin-right:30%;
+  }
+  .footer-icons{
+    margin-left: 30%;
+    margin-right:30%;
+  }
+  .footer-copyrights{
+    margin-top:5%;
+  }
 
+}
 
 
 
