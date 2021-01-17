@@ -1,0 +1,279 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    /*transition: ;*/
+}
+
+body{
+    margin:0;
+    font-family:'Lato', sans-serif;
+    text-align: center;
+}
+
+
+.container{
+    width: 100%;
+    margin:0 auto;
+}
+
+
+
+/*nav 
+=================== */
+header {
+  background: white;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 0px solid white;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 2.5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: black;
+  height: 1px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 5em;
+}
+
+.logo img{
+    width: 3rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 0em;
+    margin-left: 5em;
+    padding-top: 1.5em;
+    padding-bottom:1.5em;
+    margin-right:5em;
+    border-bottom: 1px solid black;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #960000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+@media (min-width: 48rem){
+.nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+  }
+  
+  nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+    border-bottom: 0 solid black;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+
+
+
+
+.sep-sec{
+    height: 5rem;
+}
+
+
+
+
+
+/* Footer
+=================== */
+footer {
+    background: #232323;
+    color: #fff;
+    text-align: left;
+    padding: 1em 0;
+}
+
+
+.footer-textarea ul {
+    margin:0;
+    padding:1em;
+    top:0;
+
+}
+
+.footer-textarea li {
+    font-size:0.9rem;
+    display: block;
+    line-height: 1.4rem;
+    color:rgba(235, 235, 235, 0.904);
+}
+
+
+.footer-copyrights{
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 50;
+    color:#D1D1D1;
+    padding-top:0em;
+}
+
+footer img{
+    width: 25%;
+}
+footer ul{
+    list-style: none;
+}
+
+
+section:after,
+footer::after{
+    display: block;
+    clear: both;
+}
+
+@media(min-width: 43rem){
+  footer img{
+    width:10%;
+  }
+  .footer-textarea{
+    margin-left: 30%;
+    margin-right:30%;
+  }
+  .footer-icons{
+    margin-left: 30%;
+    margin-right:30%;
+  }
+  .footer-copyrights{
+    margin-top:5%;
+  }
+
+}
+
+
+
+/* END
+=================== */
