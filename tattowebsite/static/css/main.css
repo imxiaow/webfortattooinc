@@ -248,6 +248,10 @@ footer ul{
     list-style: none;
 }
 
+.footer-copyrights a{
+  color:white;
+}
+
 
 section:after,
 footer::after{
