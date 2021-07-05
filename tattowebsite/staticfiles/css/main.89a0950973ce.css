@@ -216,7 +216,13 @@ footer {
     text-align: left;
     padding: 1em 0;
 }
+footer a {
+  color:white;
+}
 
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  color:white; 
+}
 
 .footer-textarea ul {
     margin:0;
@@ -246,6 +252,10 @@ footer img{
 }
 footer ul{
     list-style: none;
+}
+
+.footer-copyrights a{
+  color:white;
 }
 
 
